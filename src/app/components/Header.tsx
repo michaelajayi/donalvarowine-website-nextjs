@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import animatedLogo from "../../../public/animated-logo.svg";
-import background from "../../../public/images/background.svg";
+import background from "../../../public/images/background.jpg";
 
 const Header = () => {
   return (
