@@ -26,6 +26,7 @@ const config: Config = {
         georgia: ["Georgia", "serif"],
         brand: ["Brand", "sans-serif"],
         kingstone: ["Kingstone", "sans-serif"],
+        "gill-sans": ["Gill Sans", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -33,8 +34,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "background-illustration": "url('/images/background-illustration.svg')",
       },
+      colors: {
+        "custom-light": "#F9F9F9",
+        "custom-dark": "#232323",
+      },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
+
 export default config;

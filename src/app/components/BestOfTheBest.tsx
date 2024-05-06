@@ -37,7 +37,7 @@ const BestOfTheBest = () => {
     },
   ];
   return (
-    <div className='w-full h-auto flex justify-center items-center py-20 bg-[#232323]'>
+    <div className='w-full h-auto flex justify-center items-center py-20 dark:bg-custom-dark bg-custom-light'>
       <div className='w-full h-full flex justify-center items-center flex-col space-y-20 px-[74px]'>
         <div className='flex flex-col justify-center items-center space-y-2'>
           <p className='uppercase font-kingstone text-[#AF6900] text-[24px] tracking-[8.4px] text-center'>

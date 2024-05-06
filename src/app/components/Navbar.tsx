@@ -1,61 +1,75 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
+import { setProducts } from "@/lib/features/product/productSlice";
+import { useAppDispatch } from "@/lib/hooks";
+import { products } from "@/utils/products";
 import Link from "next/link";
+import cartIconDark from "../../../public/icons/cart-icon-dark.svg";
 import cartIcon from "../../../public/icons/cart-icon.svg";
-import darkModeToggle from "../../../public/icons/dark-mode-toggle.svg";
-import lightModeToggle from "../../../public/icons/light-mode-toggle.svg";
+import menuToggleDark from "../../../public/icons/menu-toggle-dark.svg";
 import menuToggle from "../../../public/icons/menu-toggle.svg";
+import personDark from "../../../public/icons/person-dark.svg";
 import person from "../../../public/icons/person.svg";
+import logoDark from "../../../public/logo-dark.svg";
 import logo from "../../../public/logo.svg";
 
+import { selectLayout } from "@/lib/features/layout/layoutSlice";
+import { useAppSelector } from "@/lib/hooks";
+
+import ThemeToggle from "./ThemeToggle";
+
 const Navbar = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const dispatch = useAppDispatch();
+  const { theme, isDarkMode } = useAppSelector(selectLayout);
 
-  const onToggleTheme = () => {
-    const toggleImage = document.querySelector(".toggle-image") as HTMLElement;
-    if (toggleImage) {
-      toggleImage.style.opacity = "0";
-      toggleImage.style.transform = "translateY(-20px)";
-
-      setTimeout(() => {
-        setIsLightMode(!isLightMode);
-        toggleImage.style.opacity = "1";
-        toggleImage.style.transform = "translateY(0)";
-      }, 300);
-    }
-  };
+  useEffect(() => {
+    dispatch(setProducts(products));
+  }, [dispatch]);
 
   return (
-    <div className="min-h-auto min-w-screen w-screen flex justify-center items-center bg-[#232323] px-[74px] h-[9vh]">
-      <div className="w-full h-auto flex justify-between items-center">
+    <div className='min-h-auto min-w-screen w-screen flex justify-center items-center dark:bg-[#232323] bg-[#F9F9F9] px-[74px] h-[9vh] sticky top-0 z-50 shadow-md'>
+      <div className='w-full h-auto flex justify-between items-center'>
         {/* icon */}
-        <Link className="flex items-center space-x-2" href="/">
-          <Image src={logo} alt="logo" priority />
-          <p className="text-white text-[40px] font-georgia">Don Álvaro</p>
+        <Link className='flex items-center space-x-2' href='/'>
+          {isDarkMode ? (
+            <Image src={logo} alt='logo' priority />
+          ) : (
+            <Image src={logoDark} alt='logo' priority />
+          )}
+          <p className='text-[#232323] dark:text-white text-[40px] font-georgia'>
+            Don Álvaro
+          </p>
         </Link>
         {/* nav buttons */}
 
-        <div className="flex space-x-10 items-center">
+        <div className='flex space-x-10 items-center'>
           {/* theme toggle button */}
-          <div className="toggle-container">
-            <Image
-              src={isLightMode ? lightModeToggle : darkModeToggle}
-              alt={isLightMode ? "light mode toggle" : "dark mode toggle"}
-              className="cursor-pointer toggle-image"
-              onClick={onToggleTheme}
-            />
+          <div className='toggle-container'>
+            <ThemeToggle />
           </div>
-          <div className="flex">
-            <div className="cursor-pointer px-5 py-5 border-l-[2px] border-t-[2px] border-b-[2px] border-r-0 border-white flex justify-center items-center">
-              <Image src={person} alt="person" priority />
+          <div className='flex'>
+            <div className='cursor-pointer px-5 py-5 border-l-[2px] border-t-[2px] border-b-[2px] border-r-0 dark:border-white border-[#232323] flex justify-center items-center'>
+              {isDarkMode ? (
+                <Image src={person} alt='person' priority />
+              ) : (
+                <Image src={personDark} alt='person' priority />
+              )}
             </div>
-            <div className="cursor-pointer px-5 py-5 border-[2px] border-white flex justify-center items-center">
-              <Image src={cartIcon} alt="cart icon" priority />
+            <div className='cursor-pointer px-5 py-5 border-[2px] dark:border-white border-[#232323] flex justify-center items-center'>
+              {isDarkMode ? (
+                <Image src={cartIcon} alt='cart icon' priority />
+              ) : (
+                <Image src={cartIconDark} alt='cart icon' priority />
+              )}
             </div>
-            <div className="cursor-pointer px-5 py-5 border-l-0 border-t-[2px] border-b-[2px] border-r-[2px] border-white flex justify-center items-center">
-              <Image src={menuToggle} alt="menu toggle" priority />
+            <div className='cursor-pointer px-5 py-5 border-l-0 border-t-[2px] border-b-[2px] border-r-[2px] dark:border-white border-[#232323] flex justify-center items-center'>
+              {isDarkMode ? (
+                <Image src={menuToggle} alt='menu toggle' priority />
+              ) : (
+                <Image src={menuToggleDark} alt='menu toggle' priority />
+              )}
             </div>
           </div>
         </div>
