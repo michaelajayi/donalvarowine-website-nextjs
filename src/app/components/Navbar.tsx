@@ -29,16 +29,25 @@ const Navbar = () => {
   }, [dispatch]);
 
   return (
-    <div className='min-h-auto min-w-screen w-screen flex justify-center items-center dark:bg-[#232323] bg-[#F9F9F9] px-[74px] h-[9vh] sticky top-0 z-50 shadow-md'>
+    <div className='min-h-auto min-w-screen w-screen flex justify-center items-center dark:bg-[#232323] bg-[#F9F9F9] px-5 md:px-[74px] h-[9vh] sticky top-0 z-50 shadow-md'>
       <div className='w-full h-auto flex justify-between items-center'>
         {/* icon */}
         <Link className='flex items-center space-x-2' href='/'>
           {isDarkMode ? (
-            <Image src={logo} alt='logo' priority />
+            <div className='w-[32.867px] h-[36.044px] md:w-auto md:h-auto'>
+              <Image src={logo} alt='logo' priority className='w-full h-full' />
+            </div>
           ) : (
-            <Image src={logoDark} alt='logo' priority />
+            <div className='w-auto h-auto'>
+              <Image
+                src={logoDark}
+                alt='logo'
+                priority
+                className='w-auto h-auto'
+              />
+            </div>
           )}
-          <p className='text-[#232323] dark:text-white text-[40px] font-georgia'>
+          <p className='text-[#232323] dark:text-white text-[16.471px] md:text-[40px] font-georgia'>
             Don Álvaro
           </p>
         </Link>
@@ -49,7 +58,7 @@ const Navbar = () => {
           <div className='toggle-container'>
             <ThemeToggle />
           </div>
-          <div className='flex'>
+          <div className='hidden md:flex'>
             <div className='cursor-pointer px-5 py-5 border-l-[2px] border-t-[2px] border-b-[2px] border-r-0 dark:border-white border-[#232323] flex justify-center items-center'>
               {isDarkMode ? (
                 <Image src={person} alt='person' priority />

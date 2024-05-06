@@ -22,7 +22,7 @@ export default function RootLayout({
         <body className='min-h-screen w-screen flex-col overflow-y-auto overflow-x-hidden'>
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </DarkModeLayout>
     </StoreProvider>

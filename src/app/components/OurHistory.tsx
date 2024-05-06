@@ -56,7 +56,7 @@ const OurHistory = () => {
         />
       </div>
 
-      <div className='w-full h-auto absolute bottom-0 left-0 flex justify-center items-center animate-rotate-infinite'>
+      <div className='w-full h-auto absolute bottom-0 left-0 flex justify-center items-center animate-rotate-infinite pointer-events-none'>
         {isDarkMode ? (
           <Image
             src={ourHistoryRotatingImage}

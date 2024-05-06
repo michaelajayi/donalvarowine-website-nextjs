@@ -33,6 +33,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "background-illustration": "url('/images/background-illustration.svg')",
+        "header-background": "url('/images/background.jpg')",
+        "header-background-mobile": "url('/images/header-bg-mobile.jpg')",
       },
       colors: {
         "custom-light": "#F9F9F9",
