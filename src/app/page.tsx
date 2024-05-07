@@ -12,11 +12,11 @@ const page = () => {
   return (
     <main className='flex flex-col'>
       <Header />
-      {/* <About /> */}
-      {/* <VideoComponent /> */}
-      {/* <BestOfTheBest /> */}
-      {/* <Testimonials /> */}
-      {/* <WhatsappComponent /> */}
+      <About />
+      <VideoComponent />
+      <BestOfTheBest />
+      <Testimonials />
+      <WhatsappComponent />
     </main>
   );
 };
