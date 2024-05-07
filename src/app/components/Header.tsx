@@ -2,8 +2,14 @@ import Image from "next/image";
 import React from "react";
 import animatedLogo from "../../../public/animated-logo.svg";
 import background from "../../../public/images/background.jpg";
+import ourHistoryRotatingImageGold from "../../../public/images/our-history-rotating-logo-gold.svg";
+import { useAppSelector } from "@/lib/hooks";
+import ourHistoryRotatingImage from "../../../public/images/our-history-rotating-logo.svg";
+import { selectLayout } from "@/lib/features/layout/layoutSlice";
 
 const Header = () => {
+  const { isDarkMode } = useAppSelector(selectLayout);
+
   return (
     <div className='min-w-screen max-h-[91vh] h-[91vh] lg:h-[80vh] w-screen flex justify-center items-center relative bg-header-background-mobile lg:bg-header-background bg-cover bg-no-repeat bg-center'>
       <Image
@@ -12,6 +18,23 @@ const Header = () => {
         priority
         className='hidden lg:absolute right-0 bottom-0 pointer-events-none animate-rotate-infinite'
       />
+
+      <div className='h-auto absolute bottom-0 right-0 lg:flex justify-end items-center pointer-events-none w-fit lg:w-full hidden'>
+        {isDarkMode ? (
+          <Image
+            src={ourHistoryRotatingImage}
+            alt='our history rotating image'
+            className='pointer-events-none animate-rotate-infinite'
+          />
+        ) : (
+          <Image
+            src={ourHistoryRotatingImageGold}
+            alt='our history rotating image'
+            className='pointer-events-none animate-rotate-infinite'
+          />
+        )}
+      </div>
+
       <div className='w-full h-full flex px-5 lg:px-[74px]'>
         <div className='flex flex-col items-start justify-start lg:justify-center w-full space-y-5 lg:space-y-8 py-5 lg:py-0'>
           <h1 className='font-brand text-[40px] lg:text-[70px] leading-[50px] lg:leading-[80px] w-full lg:w-[50%] text-white animate-fade-in'>
