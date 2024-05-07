@@ -63,6 +63,7 @@ const BestOfTheBest = () => {
               />
             </div>
           ))}
+          <div className='hidden md:block' /> {/* This is the pseudo-element */}
         </div>
       </div>
     </div>
