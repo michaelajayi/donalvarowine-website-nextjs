@@ -156,7 +156,7 @@ const Footer = () => {
                 </defs>
               </svg>
             </div>
-            <div className='flex flex-col space-y-3'>
+            <div className='flex flex-col space-y-1'>
               {aboutUsLinks.map((link, index) => (
                 <p
                   key={index}

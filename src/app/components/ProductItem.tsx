@@ -29,9 +29,9 @@ const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
         </p>
         <p className='font-kingstone text-[#211911] text-[20px] tracking-[2px] leading-normal uppercase'>
           {product.generic}
-        </p>
+      </p>
 
-        <div className='flex flex-col space-y-2'>
+        <div className='flex flex-col space-y-2 z-10'>
           <p className='font-georgia text-[#211911] text-[17px] font-bold leading-normal'>
             {formatCurrency(product.pricePerBottle)}
           </p>
