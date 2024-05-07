@@ -169,7 +169,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='w-full h-[272.782px] lg:h-full flex justify-center items-center top-0 left-0 relative'>
+      <div className='w-screen overflow-x-hidden h-[272.782px] lg:h-full flex justify-center items-center top-0 left-0 relative'>
         {isMobile ? (
           <Image
             src={footerIllustrationMobileDark}
