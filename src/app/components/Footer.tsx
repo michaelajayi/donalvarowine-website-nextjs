@@ -169,64 +169,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='w-screen overflow-x-hidden h-[272.782px] lg:h-full flex justify-center items-center top-0 left-0 relative'>
-        {isMobile ? (
-          <Image
-            src={footerIllustrationMobileDark}
-            alt='footer illustration'
-            className={`bg-transparent w-full h-full lg:h-auto pointer-events-none absolute top-0 left-0 ${
-              isDarkMode ? "opacity-1" : "opacity-[.3]"
-            }`}
-            style={{ zIndex: "1" }}
-          />
-        ) : isDarkMode ? (
-          <Image
-            src={footerIllustration}
-            alt='footer illustration'
-            className='w-full h-full lg:h-auto pointer-events-none'
-            style={{ zIndex: "1" }}
-          />
-        ) : (
-          <Image
-            src={footerIllustrationLight}
-            alt='footer illustration'
-            className='w-full h-auto pointer-events-none'
-            style={{ zIndex: "1" }}
-          />
-        )}
-
-        {isDarkMode ? (
-          isMobile ? (
-            <Image
-              src={footerIllustrationMobileDark}
-              alt='footer illustration'
-              className='bg-transparent w-full h-full lg:h-auto pointer-events-none'
-              style={{ zIndex: "1" }}
-            />
-          ) : (
-            <Image
-              src={footerIllustration}
-              alt='footer illustration'
-              className='bg-transparent w-full h-full lg:h-auto pointer-events-none'
-              style={{ zIndex: "1" }}
-            />
-          )
-        ) : isMobile ? (
-          <Image
-            src={footerIllustrationMobileDark}
-            alt='footer illustration'
-            className='bg-transparent opacity-[.5] w-full h-full lg:h-auto pointer-events-none'
-            style={{ zIndex: "1" }}
-          />
-        ) : (
-          <Image
-            src={footerIllustrationLight}
-            alt='footer illustration'
-            className='w-full h-auto pointer-events-none'
-            style={{ zIndex: "1" }}
-          />
-        )}
-      </div>
+      <div className='w-screen overflow-x-hidden h-[272.782px] flex justify-center items-center top-0 left-0 relative bg-footer-illustration-mobile lg:bg-footer-illustration bg-no-repeat bg-cover bg-center'></div>
     </div>
   );
 };

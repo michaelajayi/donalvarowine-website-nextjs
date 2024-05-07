@@ -13,8 +13,8 @@ const Header = () => {
         className='hidden lg:absolute right-0 bottom-0 pointer-events-none animate-rotate-infinite'
       />
       <div className='w-full h-full flex px-5 lg:px-[74px]'>
-        <div className='flex flex-col items-start justify-start lg:justify-center w-full space-y-8 py-8 lg:py-0'>
-          <h1 className='font-brand text-[40px] lg:text-[70px] leading-normal lg:leading-[80px] w-full lg:w-[50%] text-white animate-fade-in'>
+        <div className='flex flex-col items-start justify-start lg:justify-center w-full space-y-5 lg:space-y-8 py-5 lg:py-0'>
+          <h1 className='font-brand text-[40px] lg:text-[70px] leading-[50px] lg:leading-[80px] w-full lg:w-[50%] text-white animate-fade-in'>
             Brewed from Natures Best
           </h1>
           <div className='flex flex-col'>
@@ -27,7 +27,7 @@ const Header = () => {
               worldwide.
             </p>
           </div>
-          <button className='font-kingstone flex justify-center items-center px-20 py-3 text-[15.032px] lg:text-[24px] uppercase border border-white border-r-0 border-l-0 text-white leading-[24px]'>
+          <button className='font-kingstone flex justify-center items-center px-20 py-3 text-[14.032px] lg:text-[24px] uppercase border border-white border-r-0 border-l-0 text-white leading-[24px]'>
             See how it<span className='font-brand'>{"'"}</span>s made
           </button>
         </div>

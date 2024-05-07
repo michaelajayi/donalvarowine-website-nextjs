@@ -35,6 +35,9 @@ const config: Config = {
         "background-illustration": "url('/images/background-illustration.svg')",
         "header-background": "url('/images/background.jpg')",
         "header-background-mobile": "url('/images/header-bg-mobile.jpg')",
+        "footer-illustration": "url('/images/footer-illustration.png')",
+        "footer-illustration-mobile":
+          "url('/images/footer-illustration-dark-mobile.png')",
       },
       colors: {
         "custom-light": "#F9F9F9",
