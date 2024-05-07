@@ -26,7 +26,7 @@ const OurHistory = () => {
             equipment and a natural production, from the harvest to the
             bottling.
           </p>
-          <p className='font-georgia dark:text-white text-custom-dark text-[20px] leading-[32px] w-full lg:w-[80%]'>
+          <p className='font-georgia dark:text-white text-custom-dark text-[14px] lg:text-[20px] leading-[32px] w-full lg:w-[80%]'>
             And we’re proud of our results: awarded wines since 1999.
           </p>
         </div>

@@ -13,7 +13,7 @@ const VideoPlayer = ({ videoSrc, videoRef }: VideoPlayerProps) => {
       playsInline
       loop
       muted
-      className='w-full min-h-fit object-cover'
+      className='w-full h-full object-cover'
       controls={false}
     >
       <source src={videoSrc} type='video/mp4' />

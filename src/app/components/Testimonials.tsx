@@ -67,7 +67,7 @@ const Testimonials = () => {
           <Image
             src={wineBarrelAfter}
             alt='wine barrel after'
-            className='absolute left-0 lg:h-auto lg:w-auto top-[-20px] lg:top-[-35px]'
+            className='absolute left-0 lg:h-auto lg:w-auto top-[-20px] lg:top-[-35px] h-[303.803px] w-[303.803px]'
             style={{ zIndex: 5 }}
           />
           <div className='inline-block relative z-20'>
