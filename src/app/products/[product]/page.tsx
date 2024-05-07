@@ -17,7 +17,7 @@ const Product = ({ params }: { params: { product: string } }) => {
 
   useEffect(() => {
     dispatch(setSelectedProduct(params.product));
-  }, [dispatch]);
+  }, [dispatch, params.product]);
 
   return (
     <div className='min-w-screen w-screen h-auto flex justify-center items-center dark:bg-custom-dark bg-custom-light py-10 lg:py-20 bg-background-illustration bg-cover bg-center bg-no-repeat'>
