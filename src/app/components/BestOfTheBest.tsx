@@ -51,7 +51,7 @@ const BestOfTheBest = () => {
           {bestOfTheBest.map((item, index) => (
             <div
               key={index}
-              className='flex justify-center items-center h-full w-full px-5 py-[1.5rem] 
+              className='flex justify-center items-center px-5 py-[1.5rem] 
           border-b-[2px] border-r-[2px] border-[#D1B991] 
           lg:nth-child(4n):border-r-0 
           lg:last-child:border-b-0 lg:last-child:border-r-0 overflow-hidden'
