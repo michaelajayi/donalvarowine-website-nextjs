@@ -18,17 +18,9 @@ const TestimonialsSwiper = () => {
       author: "Ronald Richards",
     },
     {
-      review: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti omnis? Iure.",
-      author: "Alfred Rewane",
-    },
-    {
       review:
         "The wine is so nice. The classic taste and traditional blend it gives is next to none.",
       author: "Esther George",
-    },
-    {
-      review: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      author: "Bode Thomas",
     },
   ];
   return (

@@ -10,13 +10,13 @@ import WhatsappComponent from "./components/WhatsappComponent";
 
 const page = () => {
   return (
-    <main className='flex flex-col'>
+    <main className='flex flex-col overflow-x-hidden min-w-screen w-screen'>
       <Header />
       <About />
       <VideoComponent />
       <BestOfTheBest />
       <Testimonials />
-      <WhatsappComponent />
+      {/* <WhatsappComponent /> */}
     </main>
   );
 };

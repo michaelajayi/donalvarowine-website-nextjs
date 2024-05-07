@@ -1,60 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { TestimonialType } from "@/d.types";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import TestimonialItem from "./TestimonialItem";
+
 import { selectProduct } from "@/lib/features/product/productSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 
 import { Product } from "@/d.types";
 import { formatCurrency } from "@/utils/formatCurrency";
+import ProductItem from "./ProductItem";
+
+import { useMediaQuery } from "react-responsive";
 
 const Products = () => {
   const { products } = useAppSelector(selectProduct);
 
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
   const dispatch = useAppDispatch();
 
   return (
-    <div className='grid grid-cols-3 gap-5 w-full justify-items-center items-center mx-auto'>
-      {products &&
-        products.length > 0 &&
-        products.map((product: Product, index) => (
-          <div
-            className='flex space-x-3 bg-[#D9CCB9] justify-center items-center rounded-xl relative w-[400px] h-[200px]'
-            key={index}
-          >
-            <Image
-              src={product.image}
-              alt={product.title}
-              className='absolute bottom-[-1] left-3'
-            />
-            <div className='flex flex-col space-y-3 z-10'>
-              <p className='font-georgia text-[#AF6900] text-[17px] tracking-[.34px] leading-normal'>
-                {product.title}
-              </p>
-              <p className='font-kingstone text-[#211911] text-[20px] tracking-[2px] leading-normal uppercase'>
-                {product.generic}
-              </p>
-
-              <div className='flex flex-col space-y-2'>
-                <p className='font-georgia text-[#211911] text-[17px] font-bold leading-normal'>
-                  {formatCurrency(product.pricePerBottle)}
-                </p>
-                <Link
-                  href={product.link}
-                  className='font-georgia text-[#AF6900] text-[17px] leading-normal italic'
-                  // onClick={() => onSetSelectedProduct(product.title)}
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
-            <Image
-              src={product.sideImage}
-              alt={product.title}
-              className='absolute bottom-0 right-0'
-            />
-          </div>
-        ))}
-    </div>
+    <Swiper
+      // spaceBetween={30}
+      slidesPerView={1}
+      centeredSlides={isMobile}
+      grabCursor={true}
+      modules={[]}
+      effect='fade'
+      className='products-swiper w-full'
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
+    >
+      {products.map((product: Product, index: number) => (
+        <SwiperSlide key={index}>
+          <ProductItem product={product} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

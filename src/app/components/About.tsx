@@ -11,8 +11,8 @@ const About = () => {
   const { isDarkMode } = useAppSelector(selectLayout);
 
   return (
-    <div className='min-w-screen w-screen h-auto flex flex-col space-y-[8rem] justify-center items-center dark:bg-[#232323] bg-custom-light py-20 bg-background-illustration bg-cover bg-center bg-no-repeat'>
-      <div className='w-full h-full flex px-[74px]'>
+    <div className='min-w-screen w-screen h-auto flex flex-col space-y-5 lg:space-y-[8rem] justify-center items-center dark:bg-[#232323] bg-custom-light py-20 bg-background-illustration bg-cover bg-center bg-no-repeat'>
+      <div className='w-full h-full flex lg:px-[74px] py-5 lg:py-0 justify-center items-center'>
         <Products />
       </div>
 
