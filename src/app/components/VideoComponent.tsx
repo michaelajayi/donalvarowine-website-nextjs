@@ -25,7 +25,7 @@ const VideoComponent = () => {
 
   return (
     <div className='w-full h-auto flex flex-col justify-center items-center py-0 lg:py-20 dark:bg-custom-dark bg-custom-light relative space-y-0'>
-      <div className='w-full lg:h-full flex justify-center items-center px-0 lg:px-[74px] h-[280.694px]'>
+      <div className='w-full lg:h-full justify-center items-center px-0 lg:px-[74px] h-[280.694px] hidden lg:flex'>
         <div className='w-full h-auto relative'>
           <VideoPlayer videoSrc={wineVideo} videoRef={videoRef} />
           <div className='w-full h-full absolute top-0 left-0 flex justify-center items-center'>
