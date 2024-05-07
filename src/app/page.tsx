@@ -16,7 +16,7 @@ const page = () => {
       <VideoComponent />
       <BestOfTheBest />
       <Testimonials />
-      {/* <WhatsappComponent /> */}
+      <WhatsappComponent />
     </main>
   );
 };
