@@ -6,6 +6,7 @@ import {
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { useEffect } from "react";
 
+import WhatsappComponent from "@/app/components/WhatsappComponent";
 import { formatCurrency } from "@/utils/formatCurrency";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +21,7 @@ const Product = ({ params }: { params: { product: string } }) => {
   }, [dispatch, params.product]);
 
   return (
-    <div className='min-w-screen w-screen h-auto flex justify-center items-center dark:bg-custom-dark bg-custom-light py-10 lg:py-20 bg-background-illustration bg-cover bg-center bg-no-repeat'>
+    <div className='min-w-screen w-screen h-auto flex justify-center items-center dark:bg-custom-dark bg-custom-light py-10 lg:py-20 bg-background-illustration bg-cover bg-center bg-no-repeat relative'>
       <div className='w-full h-auto px-5 lg:px-[74px]'>
         {selectedProduct ? (
           <div className='w-full h-auto flex flex-col space-y-20'>
@@ -88,6 +89,12 @@ const Product = ({ params }: { params: { product: string } }) => {
             No product selected
           </p>
         )}
+      </div>
+      <div
+        className='absolute bottom-0 right-0 w-screen h-auto overflow-x-hidden'
+        style={{ zIndex: 50 }}
+      >
+        <WhatsappComponent />
       </div>
     </div>
   );

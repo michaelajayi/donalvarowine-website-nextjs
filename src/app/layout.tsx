@@ -3,6 +3,7 @@ import StoreProvider from "./StoreProvider";
 import DarkModeLayout from "./components/DarkModeLayout";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import WhatsappComponent from "./components/WhatsappComponent";
 
 import "./globals.css";
 
