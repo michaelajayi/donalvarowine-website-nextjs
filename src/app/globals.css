@@ -47,7 +47,9 @@
   white-space: nowrap;
 }
 
-/* .parent-div {
-  position: relative;
-  z-index: 1;
-} */
+@media (max-width: 767px) {
+  ._1yCVn {
+    bottom: 85px;
+    width: 350px !important;
+  }
+}

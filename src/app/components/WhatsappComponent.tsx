@@ -6,16 +6,16 @@ import logo from "../../../public/logo-dark.svg";
 
 const WhatsappComponent = () => {
   return (
-    <div className='z-50 w-screen overflow-x-hidden'>
+    <div className='z-50 overflow-x-hidden w-full lg:w-screen'>
       <WhatsAppWidget
-        phoneNumber='+44 741 381 7599' // Replace with your desired phone number
-        message='Hello! 👋🏼 What can we do for you?' // Customize the initial message
-        CompanyIcon={() => <Image src={logo} alt='company logo' />} // Replace with your company logo
-        companyName='Don Álvaro' // Replace with your company name
-        allowExit // Allow users to close the widget
-        position='right' // Position of the widget on the screen
-        autoOpen={false} // Disable the auto-open behavior
-        darkMode // Enable dark mode
+        phoneNumber='+447413817599'
+        message='Hello! 👋🏼 What can we do for you?'
+        CompanyIcon={() => <Image src={logo} alt='company logo' />}
+        companyName='Don Álvaro'
+        allowExit
+        position='right'
+        autoOpen={false}
+        darkMode
       />
     </div>
   );

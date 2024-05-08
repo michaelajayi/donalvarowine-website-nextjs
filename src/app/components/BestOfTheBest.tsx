@@ -47,7 +47,7 @@ const BestOfTheBest = () => {
             Our Loving Client
           </p>
         </div>
-        <div className='grid grid-cols-2 lg:grid-cols-4 w-full border-[2px] border-[#D1B991]'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 w-full border-[2px] border-r-0 border-[#D1B991]'>
           {bestOfTheBest.map((item, index) => (
             <div
               key={index}
