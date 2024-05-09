@@ -18,11 +18,14 @@ import logo from "../../../public/logo.svg";
 import { selectLayout } from "@/lib/features/layout/layoutSlice";
 import { useAppSelector } from "@/lib/hooks";
 
+import { selectCart } from "@/lib/features/cart/cartSlice";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
   const { theme, isDarkMode } = useAppSelector(selectLayout);
+
+  const { cartItems } = useAppSelector(selectCart);
 
   useEffect(() => {
     dispatch(setProducts(products));
@@ -58,22 +61,29 @@ const Navbar = () => {
           <div className='toggle-container'>
             <ThemeToggle />
           </div>
-          <div className='hidden lg:flex'>
-            <div className='cursor-pointer px-5 py-5 border-l-[2px] border-t-[2px] border-b-[2px] border-r-0 dark:border-white border-[#232323] flex justify-center items-center'>
+          <div className='lg:flex'>
+            <div className='cursor-pointer px-5 py-5 border-l-[2px] border-t-[2px] border-b-[2px] border-r-0 dark:border-white border-[#232323] justify-center items-center hidden lg:flex'>
               {isDarkMode ? (
                 <Image src={person} alt='person' priority />
               ) : (
                 <Image src={personDark} alt='person' priority />
               )}
             </div>
-            <div className='cursor-pointer px-5 py-5 border-[2px] dark:border-white border-[#232323] flex justify-center items-center'>
-              {isDarkMode ? (
-                <Image src={cartIcon} alt='cart icon' priority />
-              ) : (
-                <Image src={cartIconDark} alt='cart icon' priority />
-              )}
-            </div>
-            <div className='cursor-pointer px-5 py-5 border-l-0 border-t-[2px] border-b-[2px] border-r-[2px] dark:border-white border-[#232323] flex justify-center items-center'>
+            <Link href='/cart' className='cursor-pointer px-5 py-5 lg:border-[2px] dark:border-white border-[#232323] flex justify-center items-center'>
+              <div className='w-fit h-fit flex justify-center items-center relative'>
+                {isDarkMode ? (
+                  <Image src={cartIcon} alt='cart icon' priority />
+                ) : (
+                  <Image src={cartIconDark} alt='cart icon' priority />
+                )}
+                <div className='bg-[#AF6900] h-[11.25px] width-[11.25px] flex justify-center items-center aspect-square rounded-[50%] absolute top-0 right-0 translate-x-1/3 translate-y-[-30%]'>
+                  <p className='font-georgia text-[7.5px] text-white'>
+                    {cartItems.length}
+                  </p>
+                </div>
+              </div>
+            </Link>
+            <div className='cursor-pointer px-5 py-5 border-l-0 border-t-[2px] border-b-[2px] border-r-[2px] dark:border-white border-[#232323] justify-center items-center hidden lg:flex'>
               {isDarkMode ? (
                 <Image src={menuToggle} alt='menu toggle' priority />
               ) : (

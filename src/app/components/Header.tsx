@@ -37,7 +37,7 @@ const Header = () => {
 
       <div className='w-full h-full flex px-5 lg:px-[74px]'>
         <div className='flex flex-col items-start justify-start lg:justify-center w-full space-y-5 lg:space-y-8 py-5 lg:py-0'>
-          <h1 className='font-brand text-[40px] lg:text-[70px] leading-[50px] lg:leading-[80px] w-full lg:w-[50%] text-white animate-fade-in'>
+          <h1 className='font-brand text-[40px] lg:text-[70px] leading-[50px] lg:leading-[80px] w-full lg:w-[45%] text-white animate-fade-in'>
             Brewed from Natures Best
           </h1>
           <div className='flex flex-col'>

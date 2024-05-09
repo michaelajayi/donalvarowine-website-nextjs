@@ -169,7 +169,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='w-screen overflow-x-hidden h-[272.782px] flex justify-center items-center top-0 left-0 relative bg-footer-illustration-mobile lg:bg-footer-illustration bg-no-repeat bg-cover bg-center'></div>
+      <div className={`w-screen overflow-x-hidden h-[272.782px] flex justify-center items-center top-0 left-0 relative bg-footer-illustration-mobile lg:bg-footer-illustration bg-no-repeat bg-cover bg-center ${isDarkMode ? "": "bg-opacity-[.5]"}`} />
     </div>
   );
 };

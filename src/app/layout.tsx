@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import toast, { Toaster } from "react-hot-toast";
 import StoreProvider from "./StoreProvider";
 import DarkModeLayout from "./components/DarkModeLayout";
 import Footer from "./components/Footer";
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster />
         </body>
       </DarkModeLayout>
     </StoreProvider>

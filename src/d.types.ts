@@ -32,3 +32,13 @@ export type Currency =
   | "SEK"
   | "NZD";
 
+export interface CartItem {
+  product: Product;
+  bottleQty: number;
+  boxQty: number;
+  totalPricePerBox: number;
+  totalPricePerBottle: number;
+  // pricingModel: "perBottle" | "perBox";
+}
+
+export type CartItems = CartItem[];

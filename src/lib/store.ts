@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from "./features/cart/cartSlice";
 import layoutReducer from "./features/layout/layoutSlice";
 import productReducer from "./features/product/productSlice";
 
@@ -7,6 +8,7 @@ export const makeStore = () => {
     reducer: {
       product: productReducer,
       layout: layoutReducer,
+      cart: cartReducer,
     },
   });
 };
