@@ -1,20 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { TestimonialType } from "@/d.types";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import TestimonialItem from "./TestimonialItem";
 
 import { selectProduct } from "@/lib/features/product/productSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 
 import { Product } from "@/d.types";
-import { formatCurrency } from "@/utils/formatCurrency";
 import ProductItem from "./ProductItem";
 
 import { useMediaQuery } from "react-responsive";
