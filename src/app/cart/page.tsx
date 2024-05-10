@@ -52,7 +52,7 @@ const Page = () => {
   const sendMessage = () => {
     const orderSummary = generateOrderSummary();
 
-    const whatsappUrl = `https://wa.me/2347032535900?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/447413817599?text=${encodeURIComponent(
       orderSummary
     )}`;
 
