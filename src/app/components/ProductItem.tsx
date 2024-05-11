@@ -12,24 +12,27 @@ import { Product } from "@/d.types";
 const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div
-      className='flex space-x-3 bg-[#D9CCB9] justify-center items-center rounded-xl w-[360px] lg:w-auto h-auto py-5 lg:py-10 ml-3 lg:ml-0 relative parent-div'
+      className='flex space-x-3 bg-[#D9CCB9] justify-center items-center rounded-xl w-[360px] lg:w-auto h-auto py-5 lg:py-10 ml-3 lg:ml-0 relative overflow-visible'
       style={{ zIndex: 1 }}
     >
-      <div className='w-full h-fit absolute top-0 left-3' style={{ zIndex: 2 }}>
+      <div
+        className='absolute w-full h-fit top-0 left-3 overflow-visible'
+        style={{ zIndex: 50 }}
+      >
         <Image
           src={product.image}
           alt={product.title}
-          className=' bottom-[-1] left-3'
-          style={{ zIndex: 3 }}
+          className='h-full bottom-[-1] left-3 overflow-visible relative'
+          style={{ zIndex: 50 }}
         />
       </div>
-      <div className='flex flex-col space-y-3 pl-8 lg:pl-0'>
+      <div className='flex flex-col space-y-3 pl-8 lg:pl-0 z-50'>
         <p className='font-georgia text-[#AF6900] text-[17px] tracking-[.34px] leading-normal'>
           {product.title}
         </p>
         <p className='font-kingstone text-[#211911] text-[20px] tracking-[2px] leading-normal uppercase'>
           {product.generic}
-      </p>
+        </p>
 
         <div className='flex flex-col space-y-2 z-10'>
           <p className='font-georgia text-[#211911] text-[17px] font-bold leading-normal'>

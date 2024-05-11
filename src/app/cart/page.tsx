@@ -64,7 +64,7 @@ const Page = () => {
   };
 
   return (
-    <div className='min-w-screen w-screen h-auto flex justify-center items-center dark:bg-custom-dark bg-custom-light py-10 lg:py-20 bg-background-illustration bg-cover bg-center bg-no-repeat relative'>
+    <div className={`min-h-[55vh] w-screen h-auto flex justify-center items-start dark:bg-custom-dark bg-custom-light py-10 lg:py-20 bg-background-illustration bg-cover bg-center bg-no-repeat relative`}>
       <div className='w-full h-auto px-5 lg:px-[74px] flex-col space-y-20'>
         <div className='flex space-x-2 items-center'>
           <Link
